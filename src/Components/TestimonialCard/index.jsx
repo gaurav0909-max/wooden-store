@@ -25,7 +25,9 @@ const TestimonialCard = ({ testimonial }) => {
                 </div>
 
 
-                <p className="text-xl font-['Crimson_Pro'] text-gray-800 italic relative pl-12 before:absolute before:left-0 before:top-[-10px] before:text-amber-500 before:text-6xl before:opacity-50 before:-z-10 leading-relaxed tracking-wide mb-4">
+                <p className="text-xl font-['Crimson_Pro'] text-gray-800 italic relative pl-12 before:absolute 
+                before:left-0 before:top-[-10px] before:text-amber-500 before:text-6xl before:opacity-50 before:-z-10 
+                leading-relaxed tracking-wide mb-4 text-balance">
                     {testimonial.text}
                 </p>
 

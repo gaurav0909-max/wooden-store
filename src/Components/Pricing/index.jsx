@@ -1,41 +1,7 @@
+import { pricingPlans } from "../../data/pricingplanData";
 import PricingCard from "../PricingCard";
 
 const Pricing = () => {
-    const pricingPlans = [
-        {
-            title: "Standard Plywood",
-            price: "29.99",
-            features: [
-                "18mm thickness",
-                "Basic grade",
-                "Suitable for general use",
-                "Bulk discounts available"
-            ]
-        },
-        {
-            title: "Premium Grade",
-            price: "49.99",
-            features: [
-                "18mm thickness",
-                "Premium grade",
-                "Moisture resistant",
-                "Custom sizing available",
-                "Priority support"
-            ],
-            isPopular: true
-        },
-        {
-            title: "Professional",
-            price: "79.99",
-            features: [
-                "18mm thickness",
-                "Marine grade",
-                "Weather resistant",
-                "Custom finishing",
-                "24/7 support"
-            ]
-        }
-    ];
 
     return (
         <section id="pricing" className="py-24 bg-[#F1E6D9] rounded-lg">

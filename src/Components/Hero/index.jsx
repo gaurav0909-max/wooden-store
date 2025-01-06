@@ -1,36 +1,11 @@
 import React from 'react';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { slides } from '../../data/sliceData';
 
 const Hero = () => {
-  const slides = [
-    {
-      title: "Luxurious Living Spaces",
-      subtitle: "Premium Furniture Collection",
-      description: "Transform your home with our handcrafted luxury furniture pieces",
-      cta: "Shop Collection",
-      image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80",
-      alt: "Modern grey sofa in a minimalist living room"
-    },
-    {
-      title: "Bedroom Comfort",
-      subtitle: "Rest & Relaxation",
-      description: "Discover our premium bed collections for the perfect night's sleep",
-      cta: "Explore Bedroom",
-      image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&q=80", // Replace with: 
-      alt: "Elegant bedroom set with wooden bed frame"
-    },
-    {
-      title: "Dining Excellence",
-      subtitle: "Crafted for Memories",
-      description: "Create lasting memories with our exquisite dining collections",
-      cta: "View Dining Sets",
-      image: "https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&q=80", // Replace with: 
-      alt: "Contemporary wooden dining table set"
-    }
-  ];
 
   const [currentSlide, setCurrentSlide] = React.useState(0);
-  
+
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
@@ -51,9 +26,8 @@ const Hero = () => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
-              currentSlide === index ? 'opacity-100' : 'opacity-0'
-            }`}
+            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${currentSlide === index ? 'opacity-100' : 'opacity-0'
+              }`}
           >
             {/* Main image with gradient overlay */}
             <div className="relative w-full h-full">
@@ -75,24 +49,23 @@ const Hero = () => {
             {slides.map((slide, index) => (
               <div
                 key={index}
-                className={`transition-all duration-700 ${
-                  currentSlide === index
-                    ? 'opacity-100 translate-y-0'
-                    : 'opacity-0 translate-y-4'
-                }`}
+                className={`transition-all duration-700 text-pretty ${currentSlide === index
+                  ? 'opacity-100 translate-y-0'
+                  : 'opacity-0 translate-y-4'
+                  }`}
                 style={{ display: currentSlide === index ? 'block' : 'none' }}
               >
                 <p className="text-sm md:text-base text-amber-400 font-medium tracking-wider uppercase mb-4">
                   {slide.subtitle}
                 </p>
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-300 mb-6 leading-tight">
                   {slide.title}
                 </h1>
                 <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-lg">
                   {slide.description}
                 </p>
                 <div className="flex items-center space-x-4">
-                  <button className="group inline-flex items-center px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-lg transition-colors">
+                  <button className="group inline-flex items-center px-6 py-3 bg-amber-500 hover:bg-amber-600 text-black rounded-lg transition-colors">
                     {slide.cta}
                     <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
                   </button>
@@ -109,11 +82,10 @@ const Hero = () => {
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`transition-all duration-300 ${
-              currentSlide === index
-                ? 'w-8 bg-amber-500'
-                : 'w-2 bg-white/50 hover:bg-white/75'
-            } h-2 rounded-full`}
+            className={`transition-all duration-300 ${currentSlide === index
+              ? 'w-8 bg-amber-500'
+              : 'w-2 bg-white/50 hover:bg-white/75'
+              } h-2 rounded-full`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}

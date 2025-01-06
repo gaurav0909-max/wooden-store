@@ -1,26 +1,8 @@
 import { useState } from "react";
+import { faqs } from "../../data/faqData";
 
 const FAQ = () => {
     const [openIndex, setOpenIndex] = useState(null);
-
-    const faqs = [
-      {
-        question: "What types of wood sheets do you offer?",
-        answer: "We offer a wide range of wood sheets including plywood, MDF, hardwood veneer, and marine-grade sheets in various thicknesses and sizes."
-      },
-      {
-        question: "Do you offer custom sizing?",
-        answer: "Yes, we provide custom sizing services for all our wood sheets. Please contact our team for specific requirements and pricing."
-      },
-      {
-        question: "What is your delivery timeframe?",
-        answer: "Standard delivery takes 3-5 business days. We also offer express delivery options for urgent requirements."
-      },
-      {
-        question: "Do you provide bulk order discounts?",
-        answer: "Yes, we offer competitive discounts for bulk orders. Contact our sales team for a custom quote based on your requirements."
-      }
-    ];
 
     return (
         <section id="faq" className="py-24 bg-[#D8C8B9] rounded-lg">
@@ -62,7 +44,7 @@ const FAQ = () => {
                                 <div
                                     className={`px-6 pb-4 ${openIndex === index ? 'block' : 'hidden'}`}
                                 >
-                                    <p className="text-gray-500">{answer}</p>
+                                    <p className="text-gray- text-pretty">{answer}</p>
                                 </div>
                             </div>
                         );

@@ -33,7 +33,7 @@ const ProductCard = ({ product }) => {
           </span>
         </div>
         {/* Description */}
-        <p className="text-sm text-gray-600 mt-2 line-clamp-2">
+        <p className="text-sm text-gray-600 mt-2 line-clamp-2 text-pretty">
           {product.description}
         </p>
         {/* Rating */}
@@ -42,11 +42,10 @@ const ProductCard = ({ product }) => {
             {[...Array(5)].map((_, i) => (
               <Star
                 key={i}
-                className={`h-5 w-5 ${
-                  i < Math.floor(product.rating)
-                    ? "text-yellow-500"
-                    : "text-gray-300"
-                }`}
+                className={`h-5 w-5 ${i < Math.floor(product.rating)
+                  ? "text-yellow-500"
+                  : "text-gray-300"
+                  }`}
               />
             ))}
           </div>
