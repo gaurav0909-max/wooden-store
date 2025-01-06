@@ -9,7 +9,6 @@ import Footer from "./Layout/Footer";
 import { gsap } from "gsap";
 
 const App = () => {
-
   return (
     <div className="min-h-screen bg-white">
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 rounded-lg py-1">

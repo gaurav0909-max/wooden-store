@@ -13,14 +13,14 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className=" bg-[#2C1810] text-white shadow-lg z-50 rounded-lg">
+    <nav className=" bg-[#2C1810] text-white shadow-lg z-50 rounded-md">
       <div className="container mx-auto px-4 py-3 max-w-[1024px]">
         <div className="flex justify-between items-center">
           {/* Brand Logo */}
           <div className="flex items-center space-x-3">
-            <img 
-              src="/logo.png" 
-              alt="WoodCraft Logo" 
+            <img
+              src="/logo.png"
+              alt="WoodCraft Logo"
               className="h-10 w-10 rounded-lg"
             />
             <span className="font-bold text-xl md:text-2xl text-amber-500">WoodCraft</span>
@@ -43,7 +43,7 @@ const Navbar = () => {
                 "
               >
                 {link.label}
-                <span 
+                <span
                   className="
                     absolute 
                     bottom-[-4px] 
@@ -80,7 +80,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Toggle */}
           <div className="md:hidden flex items-center space-x-4">
-            <button 
+            <button
               onClick={() => setIsMenuOpen((prev) => !prev)}
               className="text-white"
             >
@@ -91,7 +91,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div 
+      <div
         className={`
           md:hidden 
           fixed 
