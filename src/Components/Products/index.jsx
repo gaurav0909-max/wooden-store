@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import ProductCard from "../ProductCard";
+import ProductCard from "./ProductCard";
 import { products } from "../../data/productsData";
 
 const Products = () => {

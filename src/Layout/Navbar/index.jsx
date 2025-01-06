@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Menu, X, ShoppingCart } from 'lucide-react';
-import MobileMenu from '../../Components/MobileMenu';
-import DesktopMenu from '../../Components/DesktopMenu';
-import Logo from '../../Components/Logo';
+import MobileMenu from '../../Components/Menu/MobileMenu';
+import DesktopMenu from './../../Components/Menu/DesktopMenu/index';
+import Logo from "../../Components/navbar-ui/Logo"
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

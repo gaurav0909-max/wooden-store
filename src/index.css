@@ -5,3 +5,18 @@
 * {
   font-family: "Overlock", "Slabo 27px", sans-serif;
 }
+
+/* Customize the scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 4px; /* Make vertical scrollbar thinner */
+  height: 4px; /* Make horizontal scrollbar thinner */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.7); /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Background of the track */
+}

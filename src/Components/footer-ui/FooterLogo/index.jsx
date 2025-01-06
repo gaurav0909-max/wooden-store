@@ -7,7 +7,7 @@ const FooterLogo = () => (
                 className="h-12 mr-4 rounded-lg"
             />
         </div>
-        <p className="text-sm text-gray-300 leading-relaxed">
+        <p className="text-sm text-gray-300 leading-relaxed text-balance">
             Crafting exceptional wooden solutions with passion, precision, and a commitment to sustainability.
         </p>
     </div>

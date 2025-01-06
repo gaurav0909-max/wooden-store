@@ -1,5 +1,5 @@
 import { pricingPlans } from "../../data/pricingplanData";
-import PricingCard from "../PricingCard";
+import PricingCard from "./PricingCard";
 
 const Pricing = () => {
 

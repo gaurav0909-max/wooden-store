@@ -1,5 +1,5 @@
 import React from 'react';
-import TestimonialCard from "../TestimonialCard";
+import TestimonialCard from "./TestimonialCard";
 import { stats, testimonials } from '../../data/testimonialsData';
 
 const Testimonials = () => {
